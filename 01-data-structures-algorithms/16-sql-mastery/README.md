@@ -67,3 +67,6 @@ I can explain query processing, optimize execution, and reason about database be
 - PostgreSQL official docs
 - Database design and optimization references
 - Engineering blogs on execution plans and indexing
+
+## K. Theoretical challenge set
+- [SQL Theoretical Questions](./12-theoretical-questions/README.md)
