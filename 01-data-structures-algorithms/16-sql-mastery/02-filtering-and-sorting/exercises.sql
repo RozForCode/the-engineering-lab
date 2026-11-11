@@ -21,11 +21,26 @@ INSERT INTO products (product_id, product_name, category, price, stock, created_
 (9, 'Tablet', 'Electronics', 450.00, 25, '2024-06-06', FALSE),
 (10, 'Headphones', 'Electronics', 150.00, 60, '2023-09-10', TRUE);
 
--- Question 1: Write a query to return all Electronic products sorted by price descending.
+-- Question 1: Write a query to return all Electronic products sorted by price descending.- too easy
 -- Question 2: Write a query to return products in Accessories with stock above 50, or Furniture products with stock 20 or less.
+select * from products where (category = 'Accessories' and stock>50) OR (category = 
+'Furniture' and stock<=20)
 -- Question 3: Write a query to find products priced between 50 and 500 that are either Electronics or Furniture.
+select * from products where
+(price between 50 and 500) and category = 'Electronics' or 'Furniture'
+-- issue here 
+-- use category in ('Electronics', 'Furniture')
+-- cause without it sql assumes bracket after the last 'and' and puts or outside leading to unexpected results
+
 -- Question 4: Write a query to return all product names beginning with L.
+select * from products where product_name like 'a%';
+-- like is case-insensitive in many rdm
+
 -- Question 5: Write a query to find products where stock is NULL.
+select * from products where stock is null
 -- Question 6: Write a query to sort products by category ascending and price descending.
+select * from products where order by category asc price desc
 -- Question 7: Write a query to return the 5 most expensive non-discontinued products.
+select top 5 * from products where discontinued = false salary desc
 -- Question 8: Write a query to return all non-discontinued products priced between 100 and 400 with stock greater than 20.
+select top 5 * from products where discontinued = false where (price between 100 and 400) and stock > 20
