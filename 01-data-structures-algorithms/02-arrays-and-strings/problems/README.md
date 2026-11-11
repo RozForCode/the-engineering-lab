@@ -4,7 +4,7 @@ Use this folder to collect solutions, notes, and implementation observations.
 
 ## Example problems
 - [Two Sum](./two-sum/notes.md)
-- [Valid Parentheses](../06-stacks-and-queues/problems/valid-parentheses/notes.md)
+- [Additional notes](./two-sum/notes.md)
 
 ## Problem template
 - Problem statement and link
